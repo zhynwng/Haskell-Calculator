@@ -2,6 +2,7 @@
 This is a simple Turing-Complete calculator constructed by Haskell. This adapted from one of labs in the course CMSC 16100 at the University of Chicago. I have not taken the course personally; this is purely done through self-interests. 
 
 To run the calculator, first compile the program through GHC, the run Main, which can be done through the following two commands: 
+
 $ ghc Main.hs
 $ ./Main
 
