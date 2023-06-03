@@ -7,6 +7,14 @@ $ ghc Main.hs
 
 $ ./Main
 
-The calculator can handle infix operations like normal calculators. It also supports let expressions (can be used to define variables), if-then-else statements, and lambda expressions. 
+The calculator can handle infix operations like normal calculators. It also supports let expressions (can be used to define variables), if-then-else statements, and lambda expressions. Some example expressions would be: 
+
+> let diff = (\x -> (\y -> y-x)) in diff 6 4
+
+> 5 + let x = 6 in x
+
+You can also perform recursion with this calculator. For example, the following expression evalute the 15th Fibonacci number
+
+> let fib = (\x -> if x == 0 then 0 else if x == 1 then 1 else fib (x - 2) +  fib (x - 1)) in fib 15
 
 For more information, consult http://cmsc-16100.cs.uchicago.edu/2021-autumn/Labs/posts/lab-6.html

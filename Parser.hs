@@ -88,12 +88,3 @@ parseExp = parseLet <++ parseIf <++ parseBool
 
 instance Read MathExp where
     readsPrec _ = readP_to_S parseExp
-
-
-----------------------------------NOTE------------------------------------------
--- The issue with the praser is that there's no "type" system; thus, the prasing
--- is soly based on symbols. If statements, in this way, is dynamically typed
--- in terms of its return values. (For short circuiting the recursion, we can't
--- implement type analysis by fully evaluate both clause and compare the result)
--- Moreover, consecutive compare symbol is also hard to implement (e.g 1 < x < 2)
--- It might be better to short circuit type errors during parsing. 

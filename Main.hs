@@ -26,9 +26,3 @@ main :: IO ()
 main = forever $ 
     catchError (prompt "> " <&> calc >>= putStr) $ \_ ->
         putStrLn "parsing error occured, please enter again"
-
-
-{- for recursion: 
-let fib = (\x -> if x == 0 then 1 else 
-        if x == 1 then 1 else fib (x - 2) +  fib (x - 1)) in fib 6
--}
