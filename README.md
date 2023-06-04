@@ -3,7 +3,7 @@ This is a simple Turing-Complete calculator constructed by Haskell. This adapted
 
 To run the calculator, first compile the program through GHC, the run Main, which can be done through the following two commands: 
 
-> ghc Main.hs
+> ghc Main.hs     
 > ./Main
 
 The calculator can handle infix operations like normal calculators. It also supports let expressions (can be used to define variables), if-then-else statements, and lambda expressions. Some example expressions would be: 
